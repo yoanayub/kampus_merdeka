@@ -1,0 +1,46 @@
+<script>
+    //-----------------membuat class------------------
+    class Gempa {
+        //member1 & 2 : variabel dan konstruktor
+        constructor(lokasi, skala) {
+            this.lokasi = lokasi;
+            this.skala = skala;
+        }
+        //member3 fungsi
+        dampak() {
+            if(this.skala == 0 && this.skala <= 2) gempa = "dampak tidak terasa";
+            else if(this.skala == 3 && this.skala <= 4) gempa = "dampak bangunan retak-retak";
+            else if(this.skala == 5 && this.skala <= 6) gempa = "dampak bangunan roboh";
+            else if(this.skala >= 6) gempa = "dampak bangunan roboh dan berpotensi tsunami";
+            else gempa = 'tidak terjadi gempa';
+        }
+        mencetak() {
+            document.write(`Lokasi Gempa: ${this.lokasi}
+            <br/>Skala Gempa: ${this.skala}`);
+            document.write(`<br/>Dampak : ${this.gempa}<hr/>`);
+
+        }
+    }
+    //---------------ciptakan object------------------
+    let a = new Gempa('Semarang', 1);
+    let b = new Gempa('Kendal', 2);
+    let c = new Gempa('Batang', 3);
+    let d = new Gempa('Pekalongan', 4);
+    let e = new Gempa('Pemalang', 5);
+    let f = new Gempa('Tegal', 6);
+    let g = new Gempa('Brebes', 5);
+    let h = new Gempa('Cirebon', 4);
+    let i = new Gempa('Indramayu', 3);
+    let j = new Gempa('Jakarta', 0);
+    //menggunakan member class
+    a.mencetak();
+    b.mencetak();
+    c.mencetak();
+    d.mencetak();
+    e.mencetak();
+    f.mencetak();
+    g.mencetak();
+    h.mencetak();
+    i.mencetak();
+    j.mencetak();
+</script>
